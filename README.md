@@ -4,22 +4,23 @@
 
 1. Clone this repo.
 2. Config your MySQL in `.env` file.
-4. Install Laravel dependencies and Laravel Breeze:
+4. Install Laravel dependencies:
     ```
     composer install
-    php artisan breeze:install 
+    php artisan key:generate
     npm install
-    npm run dev
     ```
-3. Run Artisan seeder command with:
+3. Run artisan migrate and seeder command with:
     ```
+    php artisan:migrate
     php artisan db:seed --class=UserSeeder
     ```
 4. And run your laravel application:
     ```
+    npm run dev
     php artisan serve
     ```
-5. Navigate on your browser to [http://127.0.0.1/login](http://127.0.0.1:8000/login)
+5. Navigate on your browser to [http://127.0.0.1:8000/login](http://127.0.0.1:8000/login)
 6. Input user credential with:
     ```
     email: admin@setok.com
